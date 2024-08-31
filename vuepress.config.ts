@@ -33,7 +33,7 @@ export default defineUserConfig({
   theme: FileList([
     {
       // 挂载路径
-      mountPath: "/Github",
+      mountPath: "/",
       // 文件解析器，这里使用githubReleasesFilesAnalysis,可以解析github的release文件
       analysis: githubReleasesFilesAnalysis({
         // 仓库所有者的用户名
@@ -42,8 +42,18 @@ export default defineUserConfig({
         repository: "Yuze-list"
       }),
     },
+   // {从这里开始注释
+    //  mountPath: "/",
+      // 这里使用 fileUrlTreeAnalysis 文件放到对应的文件路径中
+     // analysis: fileUrlTreeAnalysis({
+    //    "/test2/文件树-测试视频1.mp4": "https://github.com/jianjianai/FList/releases/download/root/test.video.2.1080p.webm",
+     //  "/文件树测试/文件树-测试视频1.mp4": "https://github.com/jianjianai/FList/releases/download/root/test.video.2.1080p.webm",
+     //   "/文件树-测试视频1.mp4": "https://github.com/jianjianai/FList/releases/download/root/test.video.2.1080p.webm"
+   //   }),
+  //   downProxy: cloudflarePagesDownProxy(),//如果文件树地址下载比较慢，也可以配置代理
+ //   },从这里结束注释
     {
-      mountPath: "/gitee/发行版",
+      mountPath: "/gitee",
       analysis: giteeReleasesFilesAnalysis({
         user: "yuze_gengyu",
         repository: "software",
@@ -51,7 +61,7 @@ export default defineUserConfig({
       })
     },
     {
-      mountPath: "/gitee/仓库",
+      mountPath: "/gitee/实用工具",
       analysis: giteeReposAnalysis({
         user: "yuze_gengyu",
         repository: "software"
