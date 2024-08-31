@@ -5,7 +5,7 @@ import Folder from "./layouts/Folder.vue";
 import File from "./layouts/File.vue";
 import "./css/main.css"
 
-if (!__VUEPRESS_SSR__) {console.log("欢迎使用 FList")}
+if (!__VUEPRESS_SSR__) {console.log("欢迎使用 Yuze-List")}
 export default defineClientConfig({
     enhance({ app, router, siteData }) {},
     setup() {},
