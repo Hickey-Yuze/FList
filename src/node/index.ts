@@ -16,7 +16,7 @@ const __dirname = getDirname(import.meta.url)
 export function FileList(analysisConfig:AnalysisConfig[]):Theme{
     return ()=>{
         return {
-            name:"FList",
+            name:"Yuze-List",
             clientConfigFile: path.join(__dirname, "../client/index.ts"),
             plugins: [
                 nprogressPlugin()
